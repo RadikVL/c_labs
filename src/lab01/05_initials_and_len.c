@@ -17,7 +17,6 @@ int count_symbols(const wchar_t *fullname) {
     for (int i = 0; fullname[i] != L'\0'; i++) {
         if (fullname[i] != L' ' && fullname[i] != L'\n') {
             symbols++;
-            wprintf(L"%lc\n", fullname[i]);
         }
     }
     return symbols;

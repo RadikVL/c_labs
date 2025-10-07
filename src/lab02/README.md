@@ -59,6 +59,8 @@ def col_sums(mat: list[list[float | int]]) -> list[int] | list[float] | ValueErr
 ```
 def format_record(rec: tuple[str, str, float]) -> str:
     s = rec[0].split()
+    if not isinstance(rec[2], float):
+        return ValueError('Неверный формат GPA')
     if len(s) == 3:
         return f'{s[0].capitalize()} {s[1][0].upper()}.{s[2][0].upper()}., гр. {rec[1]}, GPA {rec[2]:.2f}'
     elif len(s) == 2:

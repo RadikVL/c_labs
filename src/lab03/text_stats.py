@@ -24,7 +24,8 @@ if table_MOD:
     max_word_len = max(len(word) for word, _ in items) if items else 5
     header = f'{{:<{max_word_len}}} | {{:>7}}'.format('слово', 'частота')
     print(header)
-    print('-' * (max_word_len + 10))
+    print('-' * (max_word_len + 11))
+    if max_word_len < 5: max_word_len = 5
     for word, count in items:
         print(f'{word:<{max_word_len}} | {count:>7}')
 else:

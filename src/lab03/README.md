@@ -86,8 +86,8 @@ else:
 ```
 
 ### Here is all tests for every module:
-![](/images/lab03/all_tests.png)
+![](../../images/lab03/all_tests.png)
 
 ### Image of text_stats.py output:
 (table_MOD = True):
-![](/images/lab03/test_image.png)
+![](../../images/lab03/test_image.png)

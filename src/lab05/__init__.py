@@ -12,8 +12,8 @@ def main():
 
     args = parser.parse_args()
 
-    input_file = args.input_file[0] or "data/samples/cities.csv"
-    output_file = args.output_file[0] or "data/output/cities.xlsx"
+    input_file = args.input_file[0]
+    output_file = args.output_file[0]
 
     try:
         # csv_to_xlsx(input_file, output_file)

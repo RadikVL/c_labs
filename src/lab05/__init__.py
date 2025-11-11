@@ -17,8 +17,8 @@ def main():
 
     try:
         # csv_to_xlsx(input_file, output_file)
-        # json_to_csv(input_file, output_file)
-        csv_to_json(input_file, output_file)
+        json_to_csv(input_file, output_file)
+        # csv_to_json(input_file, output_file)
     except Exception as e:
         print(f"{e}")
 

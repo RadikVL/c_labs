@@ -3,13 +3,19 @@ from collections import Counter
 import re
 
 
-def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
+def normalize(text: str, *, casefold: bool = True, yo2e: bool = True, ordin: bool = False) -> str:
     """
     Нормализует текст:
     - приводит к нижнему регистру (если casefold=True)
     - заменяет 'ё' на 'е' (если yo2e=True)
     - удаляет символы перевода строки и возврата каретки
     """
+    if ordin:
+        text = text.replace("'", "")
+        text = text.replace("’", "")
+        text = text.replace("`", "")
+        text = text.replace("‘", "")
+        text = text.replace("--", "-")
     if casefold:
         text = text.casefold()
     if yo2e:

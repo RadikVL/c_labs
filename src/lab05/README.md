@@ -74,4 +74,6 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 ```
 
 ### Some runouts:
-![](../../images/lab04/text_report_loremipsum.png)
+![](../../images/lab05/moduleA.png)
+cvs_xlsx.py runout result
+![](../../images/lab05/csv_to_xlsx.png)

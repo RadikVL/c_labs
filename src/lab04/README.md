@@ -153,6 +153,4 @@ if __name__ == "__main__":
 ```
 
 ### Some runouts:
-![](../../images/lab05/moduleA.png)
-cvs_xlsx.py runout result
-![](../../images/lab05/csv_to_xlsx.png)
+![](../../images/lab04/text_report_loremipsum.png)

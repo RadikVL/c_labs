@@ -5,11 +5,6 @@ import pytest
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/lib')))
 from text_module import normalize, tokenize, count_freq, top_n
 
-
-# -----------------------------------------------------------
-# normalize() — full coverage
-# -----------------------------------------------------------
-
 @pytest.mark.parametrize(
     "src, expected",
     [
@@ -24,11 +19,6 @@ from text_module import normalize, tokenize, count_freq, top_n
 )
 def test_normalize(src: str, expected: str):
     assert normalize(src) == expected
-
-
-# -----------------------------------------------------------
-# tokenize() — heavy parametrization, covers punctuation
-# -----------------------------------------------------------
 
 @pytest.mark.parametrize(
     "src, expected",
@@ -45,11 +35,6 @@ def test_normalize(src: str, expected: str):
 def test_tokenize(src: str, expected: list[str]):
     assert tokenize(src) == expected
 
-
-# -----------------------------------------------------------
-# count_freq() — covers repeats, empty, mixed tokens
-# -----------------------------------------------------------
-
 @pytest.mark.parametrize(
     "tokens, expected",
     [
@@ -61,11 +46,6 @@ def test_tokenize(src: str, expected: list[str]):
 )
 def test_count_freq(tokens: list[str], expected: dict[str, int]):
     assert count_freq(tokens) == expected
-
-
-# -----------------------------------------------------------
-# top_n() — ties, empty, n>len, deterministic alphabetical
-# -----------------------------------------------------------
 
 def test_top_n_basic():
     freq = {"a": 3, "b": 2, "c": 1}

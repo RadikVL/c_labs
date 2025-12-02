@@ -31,7 +31,7 @@ def main():
 
     p1 = sub.add_parser("cat", help="Вывод файла")
     p1.add_argument("--input", required=True)
-    p1.add_argument("-n", action="store_true", help="Нумерация строк")
+    p1.add_argument("-n", action="store_true", help="Нумерация строк - булево значение. Флаг")
 
     p2 = sub.add_parser("stats", help="Частоты слов")
     p2.add_argument("--input", required=True)

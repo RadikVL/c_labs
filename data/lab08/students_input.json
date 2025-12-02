@@ -1,0 +1,92 @@
+[
+    {
+        "fio": "Student1 Example",
+        "birthdate": "2001-02-15",
+        "group": "GRP-101",
+        "gpa": 2.6
+    },
+    {
+        "fio": "Student2 Example",
+        "birthdate": "2002-03-15",
+        "group": "GRP-102",
+        "gpa": 2.7
+    },
+    {
+        "fio": "Student3 Example",
+        "birthdate": "2003-04-15",
+        "group": "GRP-103",
+        "gpa": 2.8
+    },
+    {
+        "fio": "Student4 Example",
+        "birthdate": "2004-05-15",
+        "group": "GRP-104",
+        "gpa": 2.9
+    },
+    {
+        "fio": "Student5 Example",
+        "birthdate": "2005-06-15",
+        "group": "GRP-105",
+        "gpa": 3.0
+    },
+    {
+        "fio": "Student6 Example",
+        "birthdate": "2006-07-15",
+        "group": "GRP-106",
+        "gpa": 3.1
+    },
+    {
+        "fio": "Student7 Example",
+        "birthdate": "2007-08-15",
+        "group": "GRP-107",
+        "gpa": 3.2
+    },
+    {
+        "fio": "Student8 Example",
+        "birthdate": "2008-09-15",
+        "group": "GRP-108",
+        "gpa": 3.3
+    },
+    {
+        "fio": "Student9 Example",
+        "birthdate": "2009-01-15",
+        "group": "GRP-109",
+        "gpa": 3.4
+    },
+    {
+        "fio": "Student10 Example",
+        "birthdate": "2000-02-15",
+        "group": "GRP-110",
+        "gpa": 3.5
+    },
+    {
+        "fio": "Student11 Example",
+        "birthdate": "2001-03-15",
+        "group": "GRP-111",
+        "gpa": 3.6
+    },
+    {
+        "fio": "Student12 Example",
+        "birthdate": "2002-04-15",
+        "group": "GRP-112",
+        "gpa": 3.7
+    },
+    {
+        "fio": "Student13 Example",
+        "birthdate": "2003-05-15",
+        "group": "GRP-113",
+        "gpa": 3.8
+    },
+    {
+        "fio": "Student14 Example",
+        "birthdate": "2004-06-15",
+        "group": "GRP-114",
+        "gpa": 3.9
+    },
+    {
+        "fio": "Student15 Example",
+        "birthdate": "2005-07-15",
+        "group": "GRP-115",
+        "gpa": 4.0
+    }
+]

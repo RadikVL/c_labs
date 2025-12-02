@@ -9,8 +9,9 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     '''
     cp, xp = Path(csv_path), Path(xlsx_path)
     if not cp.exists(): raise FileNotFoundError(cp)
-    if cp.suffix != ".csv" or xp.suffix != ".xlsx":
-        raise ValueError("Неверное расширение файла")
+    if cp.suffix != '.csv': raise ValueError(f'Неверное расширение csv файла {cp.suffix}')
+    if xp.suffix != '.xlsx': raise ValueError(f'Неверное расширение xlsx файла {xp.suffix}')
+
 
     rows = list(csv.reader(cp.open(encoding="utf-8")))
     if not rows or not rows[0]: raise ValueError("CSV пустой или без заголовка")

@@ -1,7 +1,7 @@
 import argparse
 
-from cvs_xlsx import * # include module JSON ↔ CSV
-from json_csv import * # include module CSV → XLSX
+from .cvs_xlsx import * # include module JSON ↔ CSV
+from .json_csv import * # include module CSV → XLSX
 
 def main():
     parser = argparse.ArgumentParser(description='Генерация текстовых отчетов')

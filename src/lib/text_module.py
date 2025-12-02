@@ -9,30 +9,25 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True, ordin: boo
     - приводит к нижнему регистру (если casefold=True)
     - заменяет 'ё' на 'е' (если yo2e=True)
     - удаляет символы перевода строки и возврата каретки
+    - удаляет лишние пробелы
     """
     if ordin:
-        text = text.replace("'", "")
-        text = text.replace("’", "")
-        text = text.replace("`", "")
-        text = text.replace("‘", "")
-        text = text.replace("--", "-")
+        text = text.replace("'", "").replace("’", "").replace("`", "").replace("‘", "").replace("--", "-")
     if casefold:
         text = text.casefold()
     if yo2e:
-        text = text.replace('ё', 'е')
-        text = text.replace('Ё', 'Е')
-    text = text.replace('\r', '')
-    text = text.replace('\n', '')
-    return text
+        text = text.replace('ё', 'е').replace('Ё', 'Е')
+    text = text.replace('\r', ' ').replace('\n', ' ')
+    return ' '.join(text.split())
 
 def tokenize(text: str) -> list[str]:
     """
     Разбивает текст на токены (слова), включая дефисные слова.
     Токен определяется как последовательность букв, цифр и подчёркиваний, возможно содержащая дефисы внутри слова.
+    Все токены приводятся к нижнему регистру.
     """
     pattern = r"\w+(?:-\w+)*"
-    return re.findall(pattern, text)
-
+    return [token.lower() for token in re.findall(pattern, text)]
 
 def count_freq(tokens: list[str]) -> dict[str, int]:
     """
@@ -44,6 +39,6 @@ def count_freq(tokens: list[str]) -> dict[str, int]:
 def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
     """
     Возвращает список из n наиболее частых токенов и их частот.
-    Список отсортирован по убыванию частоты.
+    Список отсортирован по убыванию частоты, а при равенстве частот - по алфавиту.
     """
-    return sorted(freq.items(), key=lambda x: x[1], reverse=True)[:n]
+    return sorted(freq.items(), key=lambda x: (-x[1], x[0]))[:n]

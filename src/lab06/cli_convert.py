@@ -3,13 +3,13 @@ import sys
 import argparse
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../lib')))
-from convert_modules import *
+from convert_modules import csv_to_json, json_to_csv, csv_to_xlsx
 
 def main():
-    parser = argparse.ArgumentParser(description="CLI-converter")
+    parser = argparse.ArgumentParser(description="CLI-converter") # инициализация считывания данных при вызове из командной строки
     sub = parser.add_subparsers(dest="cmd", required=True)
 
-    p1 = sub.add_parser("json2csv", help="JSON → CSV")
+    p1 = sub.add_parser("json2csv", help="JSON → CSV function for conver")
     p1.add_argument("--in", dest="input", required=True)
     p1.add_argument("--out", dest="output", required=True)
 

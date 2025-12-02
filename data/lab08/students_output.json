@@ -1,0 +1,14 @@
+[
+  {
+    "fio": "JohnDow",
+    "birthdate": "2021-02-15",
+    "group": "GRP-101",
+    "gpa": 4.6
+  },
+  {
+    "fio": "VladDementev",
+    "birthdate": "2001-03-15",
+    "group": "GRP-102",
+    "gpa": 4.85
+  }
+]
